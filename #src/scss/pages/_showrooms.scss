@@ -1,0 +1,118 @@
+.showrooms {
+  @include adaptiv-value('padding-top', 60, 30, 1);
+  @include adaptiv-value('padding-bottom', 60, 30, 1);
+
+  .container {
+    overflow-x: hidden;
+  }
+
+  &__title {
+    @include adaptiv-value('margin-bottom', 50, 25, 1);
+  }
+
+  &__map {
+    overflow: hidden;
+    height: 390px;
+  }
+
+  &__table-wrapper {
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 450px;
+
+    @media screen and (max-width: $xsmall) {
+      font-size: 12px;
+    }
+
+    tr {
+      vertical-align: baseline;
+
+      &:nth-child(even) {
+        background-color: #e9ecec;
+      }
+    }
+
+    td,
+    th {
+      min-height: 50px;
+      padding: 15px 10px;
+
+      @media screen and (max-width: $medium) {
+        padding: 10px 5px;
+      }
+
+      @media screen and (max-width: $xsmall) {
+        padding: 5px;
+      }
+
+      a {
+        display: flex;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+
+
+    }
+
+    th {
+      font-weight: 400;
+      text-align: left;
+    }
+  }
+
+  &__adress,
+  &__tel {
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      flex: 0 0 15px;
+      height: 15px;
+      margin-right: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media screen and (max-width: $medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__adress {
+    &:before {
+      background-image: url("../../img/icons/location.png");
+    }
+  }
+
+  &__tel {
+    justify-content: flex-end;
+
+    &:before {
+      background-image: url("../../img/icons/call.png");
+    }
+  }
+
+  &__tel-links {
+    a {
+      white-space: nowrap;
+    }
+  }
+}
+
+.information {
+
+  &__text {
+    p:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}
