@@ -1,0 +1,164 @@
+.blog {
+    // border: 1px solid red;
+    padding-bottom: 50px;
+    &__item {
+        margin-right: 40px;
+        &-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            line-height: 1.3;
+            @media screen and (max-width: $large) {
+                font-size: 22px;
+            }
+        }
+        &-text {
+            text-align: justify;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            @media screen and (max-width: $large) {
+                font-size: 12px;
+            }
+        }
+        &-btn {
+            padding: 18px;            
+        }
+    }
+    &__main{
+        padding-top: 25px;
+        &-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 50px;
+            grid-column-gap: 100px;
+            position: relative;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $midgrey;
+            &:not(:last-child) {
+                margin-bottom: 42px;
+            }
+            @media screen and (max-width: $large) {
+                grid-column-gap: 30px;
+            }
+            @media screen and (max-width: $small) {
+                grid-template-columns: auto;
+            }
+
+        }
+        &-title {
+            grid-column: span 2;
+            font-size: 24px;
+            line-height: 1.1em;
+            margin-bottom: 20px;
+            color: $black;
+            @media screen and (max-width: $large) {
+                font-size: 22px;
+            }
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            &--title {
+                font-size: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                @media screen and (max-width: $large) {
+                    font-size: 18px;
+                }
+            }
+            &--text {
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+            // &--img {
+            // }
+            &--btn {
+                margin-top: auto;
+                color: $accent;
+            }
+        }
+        &-btn {
+            color: $accent;
+            border: 2px solid $accent;
+            display: inline-block;
+            text-align: center;
+            padding: 18px;
+            max-width: 262px;
+            transition: .5s all ease;
+            @media screen and (max-width: $small) {
+                padding: 10px;
+            }
+            &:hover {
+                background-color: $accent;
+                color: #fff;
+            }
+        }
+    }
+    &__top{
+        &-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+        &-nav {
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
+            position: relative;
+            // border-bottom: 1px solid $midgrey;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                bottom: -1px;
+                border-bottom: 1px solid $midgrey;
+                position: absolute;
+            }
+        }
+    }
+    &__img-wrapper {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-bottom: 55%;
+        background-color: red;
+        margin-bottom: 25px;
+        & img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__menu{
+        &-list {
+            display: flex;
+        }
+        &-item {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+        &-link {
+            font-size: 14px;
+            font-weight: 400;
+            transition: .5s all ease;
+            &.current {
+                color: $accent;
+            }
+        }
+    }
+    &__heading {
+        font-size: 18px;
+        font-weight: 700;
+        color: $black;
+        margin-right: 90px;
+    }
+}
+    
