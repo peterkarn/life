@@ -1,8 +1,11 @@
 .blog {
     // border: 1px solid red;
     padding-bottom: 50px;
+    padding-top: 25px;
     &__item {
         margin-right: 40px;
+        display: flex;
+        flex-direction: column;
         &-title {
             margin-bottom: 20px;
             font-size: 24px;
@@ -10,6 +13,10 @@
             @media screen and (max-width: $large) {
                 font-size: 22px;
             }
+            @media screen and (max-width: $medium) {
+                font-size: 20px;
+            }
+
         }
         &-text {
             text-align: justify;
@@ -19,9 +26,12 @@
             @media screen and (max-width: $large) {
                 font-size: 12px;
             }
+            
         }
         &-btn {
-            padding: 18px;            
+            padding: 18px;
+            width: 25%;
+            text-align: center;            
         }
     }
     &__main{
@@ -33,15 +43,16 @@
             grid-column-gap: 100px;
             position: relative;
             padding-bottom: 30px;
-            border-bottom: 1px solid $midgrey;
             &:not(:last-child) {
                 margin-bottom: 42px;
+                border-bottom: 1px solid $midgrey;
             }
             @media screen and (max-width: $large) {
                 grid-column-gap: 30px;
             }
             @media screen and (max-width: $small) {
-                grid-template-columns: auto;
+                grid-template-columns: 1fr;
+                grid-row-gap: 35px;
             }
 
         }
@@ -53,6 +64,10 @@
             color: $black;
             @media screen and (max-width: $large) {
                 font-size: 22px;
+            }
+            @media screen and (max-width: $small) {
+                grid-column: span 1;
+                margin-bottom: 10px;
             }
         }
         &-item {
@@ -68,10 +83,19 @@
                 @media screen and (max-width: $large) {
                     font-size: 18px;
                 }
+                @media screen and (max-width: $xsmall) {
+                    font-size: 16px;
+                }
             }
             &--text {
                 margin-bottom: 20px;
                 font-size: 14px;
+                @media screen and (max-width: $medium) {
+                    font-size: 13px;
+                }
+                @media screen and (max-width: $xsmall) {
+                    font-size: 11px;
+                }
             }
             // &--img {
             // }
@@ -102,6 +126,9 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
+            @media screen and (max-width: $small ) {
+                display: none;
+            }
         }
         &-nav {
             display: flex;
@@ -117,6 +144,9 @@
                 bottom: -1px;
                 border-bottom: 1px solid $midgrey;
                 position: absolute;
+            }
+            @media screen and (max-width: $small) {
+                display: none;
             }
         }
     }
