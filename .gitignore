@@ -1,3 +1,5 @@
 node_modules
-life
 .DS_store
+life/
+.quokka
+.stylelintrc

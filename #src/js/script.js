@@ -314,7 +314,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  //
 
   @@include('./files/sliders.js', {})
   @@include('./files/spoilers.js', {})
