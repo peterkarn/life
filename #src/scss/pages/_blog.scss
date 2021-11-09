@@ -3,7 +3,6 @@
     padding-bottom: 50px;
     padding-top: 25px;
     &__item {
-        margin-right: 40px;
         display: flex;
         flex-direction: column;
         &-title {
@@ -125,9 +124,11 @@
         &-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 40px;
             align-items: center;
             @media screen and (max-width: $small ) {
-                display: none;
+                grid-template-columns: auto;
+
             }
         }
         &-nav {
@@ -147,6 +148,19 @@
             }
             @media screen and (max-width: $small) {
                 display: none;
+            }
+        }
+        &-img {
+            padding-bottom: 100%;
+            &::hover {
+                img {
+                      transform: scale(1.03);
+                }
+              
+            }
+            @media screen and (max-width: $small) {
+                order: -1;
+                padding-bottom: 60%;
             }
         }
     }

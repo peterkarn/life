@@ -212,3 +212,21 @@ if (document.querySelector('.collections-block__wrapper')) {
     }
   }).mount()
 }
+
+if (document.querySelector('.showroom__slider')) {
+  new Splide('.showroom__slider', {
+    perPage: 3,
+    gap: "30px",
+    arrows: false,
+    pagination: false,
+  }).mount()
+}
+
+if (document.querySelector('.diploma__slider')) {
+  new Splide('.diploma__slider', {
+    perPage: 3,
+    gap: "10px",
+    arrows: false,
+    pagination: false,
+  }).mount()
+}
