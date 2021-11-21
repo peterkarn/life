@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>LIFE мебель</title>
+        <meta name="description" content="LIFE мебель" />
+        <meta name="keywords" content="LIFE мебель" />
+        <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+        <meta property="og:title" content="LIFE мебель" />
+        <meta property="og:description" content="LIFE мебель" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="img/logo.png" />
+        <meta property="og:site_name" content="LIFE мебель" />
+        <link rel="stylesheet" href="css/style.min.css" />
+    </head>
+</head>
+
+<body>
+    @@include('_header.html')
+    <div class="wrapper fabrics-wrapper">
+        <div class="container">
+            <div class="fabrics__inner">
+                <main class="main fabrics">
+                    <h1 class="visually-hidden">Ткани</h1>
+                    <div class="fabrics__menu">
+
+
+                        <div class="fabrics__menu-top">
+                            <label for="Material" class="fabrics__menu-label">
+                                <p class="fabrics__menu-title">Искать Материалы</p>
+                                <select class="fabrics__menu-select"></select>
+                            </label>
+                        </div>
+                        <div class="fabrics__menu-bottom">
+                            <div class="fabrics__menu-show">
+                                <p class="fabrics__menu-heading">Показать</p>
+                                <div class="fabrics__menu-showbtns" data-choose>
+                                    <button class="fabrics__menu-showbtn _active">
+                                        Ткань
+                                    </button>
+                                    <button class="fabrics__menu-showbtn ">
+                                        Кожа
+                                    </button>
+                                    <button class="fabrics__menu-showbtn ">
+                                        Эко Кожа
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="fabrics__menu-show">
+                                <p class="fabrics__menu-heading">Сортировать по</p>
+                                <div class="fabrics__menu-showbtns" data-choose>
+                                    <button class="fabrics__menu-showbtn _active">
+                                        Новинки
+                                    </button>
+                                    <button class="fabrics__menu-showbtn ">
+                                        Цвет
+                                    </button>
+                                    <button class="fabrics__menu-showbtn ">
+                                        Цвет
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- <div class="fabrics__menu-colors">
+                                <p class="fabrics__menu-heading">Сортировать по</p>
+                                <div class="fabrics__menu-colors__wrapper">
+                                    <ul class="fabrics__menu-colors__list">
+                                        <li class="fabrics__menu-colors__item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox"
+                                                    data-validate-field="checkbox">
+                                                <span class="check__box" style="background-color: red"></span>
+                                            </label>
+                                        </li>
+                                        <li class="block-catalogue__color-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox"
+                                                    data-validate-field="checkbox">
+                                                <span class="check__box" style="background-color: blue"></span>
+                                            </label>
+                                        </li>
+                                        <li class="block-catalogue__color-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox"
+                                                    data-validate-field="checkbox">
+                                                <span class="check__box" style="background-color: cyan"></span>
+                                            </label>
+                                        </li>
+                                        <li class="block-catalogue__color-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox"
+                                                    data-validate-field="checkbox">
+                                                <span class="check__box" style="background-color: red"></span>
+                                            </label>
+                                        </li>
+                                        <li class="block-catalogue__color-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox"
+                                                    data-validate-field="checkbox">
+                                                <span class="check__box" style="background-color: blue"></span>
+                                            </label>
+                                        </li>
+                                        <li class="block-catalogue__color-item">
+                                            <label class="check">
+                                                <input class="check__input" type="checkbox"
+                                                    data-validate-field="checkbox">
+                                                <span class="check__box" style="background-color: cyan"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <ul class="block-catalogue__colors">
+                                <li class="block-catalogue__color-item">
+                                    <label class="fabrics__menu-colors__check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: red"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: blue"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: cyan"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: red"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: blue"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: cyan"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: red"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: blue"></span>
+                                    </label>
+                                </li>
+                                <li class="block-catalogue__color-item">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" data-validate-field="checkbox">
+                                        <span class="check__box" style="background-color: cyan"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class=" fabrics__menu-category">
+                                <p class="fabrics__menu-heading">Показать</p>
+                                <div class="fabrics__menu-category-btns" data-choose>
+                                    <button class="fabrics__menu-category-btn _active">
+                                        1-я категория
+                                    </button>
+                                    <button class="fabrics__menu-category-btn">
+                                        2-я категория
+                                    </button>
+                                    <button class="fabrics__menu-category-btn">
+                                        3-я категория
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="cards__wrapper">
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/fabric-2.jpg"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/fabric-2.jpg" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/fabric-3.jpg"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория" data-descr="Bentley - это
+                            превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу
+                            и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий
+                            комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/fabric-3.jpg" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/fabric-3.jpg">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/fabric-3.jpg" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+                            <div class="cards__item" data-preview="img/content/fabrics/first-fabric.png"
+                                data-title="Camel 15 Denim" data-category="100% полиэстер"
+                                data-secondcategory="2-ая категория"
+                                data-descr="Bentley - это
+                                превосходная плюшевая ткань, напоминающая синель, с глубокими бороздками. Окрашенная в пряжу и плотно сплетенная для придания богатой и прочной текстуры, Bentley обеспечивает мягкий комфорт синели с исключительной прочностью.">
+                                <div class="cards__item-img _ibg">
+                                    <img src="img/content/fabrics/first-fabric.png" alt="">
+                                </div>
+                                <h3 class="cards__item-title">
+                                    Camel 15 Denim
+                                </h3>
+                            </div>
+
+                        </div>
+                        <div class="cards__sidebar sidebar">
+                            <div class="sidebar__top">
+                                <button class="cards__sidebar-btn">X</button>
+                                <div class="sidebar__image">
+                                </div>
+                                <div class="sidebar__offer">
+                                    <div class="sidebar__title">
+
+                                    </div>
+                                    <div class="sidebar__categories">
+                                        <div class="sidebar__category">
+                                        </div>
+                                        <div class="sidebar__category sidebar__second-category">
+                                        </div>
+                                    </div>
+                                    <p class="sidebar__descr">
+
+                                    </p>
+                                    <div class="sidebar__offer-btns">
+                                        <button class="sidebar__offer-btn btn">
+                                            Заказать в этой ткани
+                                        </button>
+                                        <button class="sidebar__offer-btn photo-btn">
+                                            Посмотреть фото клиентов
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="sidebar__bottom">
+                                <div class="sidebar__items">
+                                    <a href="#" class="sidebar__item">
+                                        <div class="sidebar__img"></div>
+                                        <h3 class="sidebar__item-title">
+                                            Название дивана
+                                        </h3>
+                                        <p class="sidebar__item-price">
+                                            От 30000Р
+                                        </p>
+                                        <p class="sidebar__item-subprice">
+                                            3000р в месяц
+                                        </p>
+                                    </a>
+                                    <a href="#" class="sidebar__item">
+                                        <div class="sidebar__img"></div>
+                                        <h3 class="sidebar__item-title">
+                                            Название дивана
+                                        </h3>
+                                        <p class="sidebar__item-price">
+                                            От 30000Р
+                                        </p>
+                                        <p class="sidebar__item-subprice">
+                                            3000р в месяц
+                                        </p>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                @@include('_footer.html')
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/fabrics.js"></script>
+</body>
+
+</html>

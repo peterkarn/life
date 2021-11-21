@@ -120,8 +120,6 @@
                 }
             }
 
-            // &--img {
-            // }
             &--btn {
                 margin-top: auto;
                 color: $accent;
@@ -237,10 +235,27 @@
         &-link {
             font-size: 14px;
             font-weight: 400;
-            transition: .5s all ease;
+            transition: 1s all ease;
+
+            &:hover {
+                opacity: 0.8;
+                color: $accent;
+            }
 
             &.current {
                 color: $accent;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    top: 50px;
+                    z-index: 2;
+                    position: absolute;
+                    background-color: $accent;
+                    display: block;
+                }
             }
         }
     }
