@@ -2,11 +2,11 @@ const cards = document.querySelectorAll(".cards__item");
 const sidebar = document.querySelector(".cards__sidebar");
 const sidebarCloseBtn = document.querySelector(".cards__sidebar-btn");
 const btn = document.querySelectorAll(".fabrics__menu-showbtn");
+
 chooseButtons = document.querySelectorAll("[data-choose]");
 cards.forEach((card) => {
   card.addEventListener("click", function () {
     sidebar.classList.add("active");
-    console.log("Carta");
   });
 });
 

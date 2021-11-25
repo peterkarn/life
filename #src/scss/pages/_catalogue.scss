@@ -1,4 +1,5 @@
 @import "../components/toggler";
+@import "../components/color-checkboxes";
 
 .catalogue {
   overflow: unset;
@@ -107,7 +108,7 @@
     margin: 0 10px 0 0;
     max-width: 350px;
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $medium) {
       grid-column: span 2;
     }
   }
@@ -187,55 +188,8 @@
     }
   }
 
-  &__colors {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin: 0 20px 0 auto;
-    max-width: 300px;
-
-    .check {
-      padding-left: 28px;
-      cursor: pointer;
-
-      &__input {
-        position: absolute;
-        appearance: none;
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      &__box {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        margin-left: -25px;
-        border-radius: 50%;
-      }
-
-    }
-
-    // checked
-    .check__input:checked+.check__box {
-      outline: 2px solid $accent;
-      outline-offset: 2px;
-    }
-
-    //focus
-    .check__input:focus+.check__box {
-      outline: 2px solid $accent;
-    }
-
-    //disabled
-    .check__input:disabled+.check__box {
-      opacity: 0.3;
-    }
-
-
-    @media screen and (max-width: $medium) {
-      display: none;
-    }
+  @media screen and (max-width: $medium) {
+    display: none;
   }
 
   &__color-item {
