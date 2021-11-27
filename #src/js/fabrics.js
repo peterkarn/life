@@ -14,16 +14,6 @@ sidebarCloseBtn.addEventListener("click", function () {
   sidebar.classList.remove("active");
 });
 
-chooseButtons.forEach((block) => {
-  block.addEventListener("click", (e) => {
-    if (e.target.matches("button")) {
-      const current = block.querySelector("._active");
-      current.classList.remove("_active");
-      e.target.classList.add("_active");
-    }
-  });
-});
-
 cards.forEach((card) => {
   card.addEventListener("click", function () {
     sidebar.classList.add("active");
@@ -45,6 +35,5 @@ cards.forEach((card) => {
     sidebarSecondCategory.innerHTML = cardSecondCategory;
     sidebarImage.style.backgroundImage = `url(${cardPreview})`;
     console.log(cardPreview);
-    // sidebarCategory.innerHTML = cardCategory;
   });
 });

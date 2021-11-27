@@ -37,7 +37,7 @@
                             <div class="fabrics__menu-show">
                                 <p class="fabrics__menu-heading">Показать</p>
                                 <div class="fabrics__menu-showbtns" data-choose>
-                                    <button class="fabrics__menu-showbtn _active">
+                                    <button class="fabrics__menu-showbtn current">
                                         Ткань
                                     </button>
                                     <button class="fabrics__menu-showbtn ">
@@ -51,7 +51,7 @@
                             <div class="fabrics__menu-show">
                                 <p class="fabrics__menu-heading">Сортировать по</p>
                                 <div class="fabrics__menu-showbtns" data-choose>
-                                    <button class="fabrics__menu-showbtn _active">
+                                    <button class="fabrics__menu-showbtn current">
                                         Новинки
                                     </button>
                                     <button class="fabrics__menu-showbtn ">
@@ -62,7 +62,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <ul class="fabrics__colors color-checkboxes">
+                            <ul class="fabrics__colors color-checkboxes" data-da="fabrics__mobile-placeholder, 1,1140,"
+                                class="content__block">
                                 <li class="color-checkboxes__item">
                                     <label class="check">
                                         <input class="check__input" type="checkbox" data-validate-field="checkbox">
@@ -112,10 +113,10 @@
                                     </label>
                                 </li>
                             </ul>
-                            <div class=" fabrics__menu-category">
+                            <div class=" fabrics__menu-category" data-da="fabrics__mobile-placeholder, 2,992,">
                                 <p class="fabrics__menu-heading">Показать</p>
                                 <div class="fabrics__menu-category-btns" data-choose>
-                                    <button class="fabrics__menu-category-btn _active">
+                                    <button class="fabrics__menu-category-btn current">
                                         1-я категория
                                     </button>
                                     <button class="fabrics__menu-category-btn">
@@ -126,6 +127,9 @@
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="fabrics__mobile-placeholder">
+
                         </div>
                     </div>
                     <div class="cards">
@@ -410,9 +414,11 @@
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/dynamic_adapt.js"></script>
     <script src="js/splide.min.js"></script>
     <script src="js/fabrics.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

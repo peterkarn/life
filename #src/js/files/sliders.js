@@ -268,20 +268,22 @@ if (document.querySelector(".process__slider")) {
   }).mount();
 }
 
-new Splide(".showroom__slider", {
-  perPage: 3,
-  gap: "40px",
-  arrows: true,
-  breakpoints: {
-    768: {
-      perPage: 2,
-      arrows: false,
+if (document.querySelector(".showroom__slider")) {
+  new Splide(".showroom__slider", {
+    perPage: 3,
+    gap: "40px",
+    arrows: true,
+    breakpoints: {
+      768: {
+        perPage: 2,
+        arrows: false,
+      },
+      540: {
+        perPage: 1.5,
+      },
+      475: {
+        perPage: 1,
+      },
     },
-    540: {
-      perPage: 1.5,
-    },
-    475: {
-      perPage: 1,
-    },
-  },
-}).mount();
+  }).mount();
+}
