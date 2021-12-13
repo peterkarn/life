@@ -74,8 +74,12 @@
   }
 
   &__top {
+    position: sticky;
+    top: 43px;
+    z-index: 1;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #fff;
     padding-top: 40px;
     padding-bottom: 30px;
@@ -128,6 +132,7 @@
       padding: 10px 12px;
       background-color: #fff;
       cursor: pointer;
+      grid-row: 2 / 3;
     }
   }
 
@@ -186,10 +191,16 @@
       display: inline-block;
       margin-right: 0.2em;
     }
+
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
   }
 
-  @media screen and (max-width: $medium) {
-    display: none;
+  &__colors {
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
   }
 
   &__color-item {
@@ -206,6 +217,8 @@
 
     @media screen and (max-width: $medium) {
       text-align: center;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
     }
 
     option.first {
