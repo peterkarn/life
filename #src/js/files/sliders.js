@@ -1,17 +1,18 @@
 // слайдер в шапке
 
-new Splide(".header__topline-container", {
-  pagination: false,
-  arrows: false,
-  autoWidth: true,
-  gap: "50px",
-  breakpoints: {
-    720: {
-      gap: 15,
+if (document.querySelector(".header__topline-container")) {
+  new Splide(".header__topline-container", {
+    pagination: false,
+    arrows: false,
+    autoWidth: true,
+    gap: "50px",
+    breakpoints: {
+      720: {
+        gap: 15,
+      },
     },
-  },
-}).mount();
-
+  }).mount();
+}
 // main slider
 
 if (document.querySelector(".hero__slider")) {
@@ -197,6 +198,8 @@ if (document.querySelector(".collections-block__wrapper")) {
     gap: 30,
     arrows: true,
     pagination: false,
+    type: "loop",
+    perMove: 1,
     breakpoints: {
       960: {
         arrows: false,

@@ -308,9 +308,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // modals 
 
-  if (document.querySelector('[data-hystmodal')) {
+    if (document.querySelector('[data-hystmodal')) {
     const myModal = new HystModal({
       linkAttributeName: "data-hystmodal",
+      beforeOpen: function(){
+       pageMarginAdd()
+     },
+     afterClose: function(){
+       pageMarginRemove()
+    },
     });
   }
 
