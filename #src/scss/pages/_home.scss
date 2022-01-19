@@ -429,3 +429,22 @@
     min-width: 140px;
   }
 }
+
+.toprated__slider {
+  position: relative;
+
+  & .splide__arrow--prev {
+    width: 50px;
+    height: 50px;
+    top: 23%;
+    left: -15px;
+
+  }
+
+  & .splide__arrow--next {
+    width: 50px;
+    height: 50px;
+    top: 23%;
+    right: -15px;
+  }
+}

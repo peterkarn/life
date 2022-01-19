@@ -37,13 +37,16 @@ if (document.querySelector(".models__slider")) {
 
 if (document.querySelector(".toprated__slider")) {
   new Splide(".toprated__slider", {
-    arrows: false,
+    arrows: true,
     autoWidth: true,
     pagination: true,
     perMove: 1,
     type: "loop",
     gap: 30,
     breakpoints: {
+      768: {
+        arrows: false,
+      },
       375: {
         gap: 30,
         autowidth: false,
@@ -134,7 +137,7 @@ if (document.querySelector(".feedback__slider")) {
 }
 
 if (document.querySelector(".sliders-block")) {
-  var secondarySlider = new Splide(".bottom-carousel__slider", {
+  const secondarySlider = new Splide(".bottom-carousel__slider", {
     rewind: true,
     fixedWidth: 164,
     fixedHeight: 102,
