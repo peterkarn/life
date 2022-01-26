@@ -1,0 +1,45 @@
+$maxWidth: 1920;
+$maxWidthContainer: 1140;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+
+  @if $type==1 {
+    //Только если меньше контейнера
+    #{$property}: $startSize + px;
+
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+    }
+  }
+
+  @else if $type==2 {
+    //Только если больше контейнера
+    #{$property}: $startSize + px;
+
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  }
+
+  @else {
+    //Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
+$large: 1200px;
+$medium: 992px;
+$small: 768px;
+$xsmall: 375px;
+
+// colors
+$accent: #016a78;
+$lightgrey: #f6f6f6;
+$midgrey: #e5e5e5;
+$black: #282828;
+$teal: #be5a5b;
+$attention: #761111;
+$grey: #8f8e8e;
+$red: #cd5a5b;
+$latte: #f7f2e8;

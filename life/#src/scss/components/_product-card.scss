@@ -1,0 +1,159 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  @media screen and (max-width: $large) {
+    width: 290px;
+  }
+
+  &__image {
+    display: block;
+    padding-bottom: 90%;
+    margin-bottom: 30px;
+    background-color: $lightgrey;
+
+    @media screen and (max-width: $large) {
+      padding-bottom: 94%;
+    }
+
+    img.product-card__model {
+      object-fit: contain;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: calc(100% - 30px);
+      transition: opacity 0.3s;
+    }
+
+    img.product-card__interrior {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 5px;
+
+  }
+
+  &__prices {
+    margin-top: auto;
+
+  }
+
+  &__oldprice {
+    text-decoration: line-through;
+
+    &_red {
+      color: red;
+    }
+
+  }
+
+  &__price {
+
+    &_credit {}
+
+    &_current {
+      font-size: 18px;
+    }
+  }
+
+  &_discount {
+    .product-card__prices {
+      display: grid;
+      column-gap: 10px;
+      row-gap: 5px;
+      grid-template-columns: min-content auto;
+    }
+
+    .product-card__price_credit {
+      grid-column: span 2;
+      font-size: 12px;
+    }
+
+    .product-card__oldprice_red {
+      grid-column: 2/3;
+    }
+  }
+
+  &_centered {
+    text-align: center;
+
+    .product-card__prices {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto;
+    }
+
+    .product-card__oldprice {
+      justify-content: center;
+    }
+  }
+
+  &_lefttext {
+    text-align: left;
+  }
+
+  &__config {
+    overflow: hidden;
+    max-height: 0;
+    min-height: 0;
+    transition:
+      max-height 0.3s ease-out,
+      min-height 0.3s ease-out;
+  }
+
+  .card-config {
+    display: grid;
+    grid-template-columns: repeat(4, 25px) 1fr;
+    gap: 6px;
+    color: $grey;
+
+    &__item {
+      height: 17px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      &_more {
+        outline: none !important;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      // &.active {
+      //   border: 1px solid $accent;
+      // }
+    }
+  }
+
+
+  @media screen and (min-width: $medium + 1) {
+    &:hover {
+      img.product-card__model {
+        opacity: 0;
+      }
+
+      img.product-card__interrior {
+        opacity: 1;
+      }
+
+      .product-card__config {
+        max-height: 30px;
+        min-height: 30px;
+      }
+    }
+  }
+
+}

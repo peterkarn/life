@@ -1,0 +1,402 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+
+  &._lock {
+    overflow: hidden;
+  }
+
+  &.covered {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($black, 0.75);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  @include wrapper;
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.position-static.position-static {
+  position: static;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.wrapper {
+  overflow-x: hidden;
+
+}
+
+.main {
+  flex-grow: 1;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 9px;
+  min-width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &_primary {
+    color: #fff;
+    background-color: $accent;
+
+    &:active,
+    &:focus {
+      background-color: #008bb8;
+    }
+
+    &:hover {
+      background-color: rgba($accent, 0.8);
+    }
+  }
+
+  &_secondary {
+    color: $black;
+    border: 1px solid #e5e5e5;
+
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+    }
+
+    &:active,
+    &:focus {
+      background-color: rgba($accent, 0.8);
+    }
+  }
+
+  &_o {
+    border: 2px solid transparent;
+
+    &:active,
+    &:focus {
+      color: #008bb8;
+      border-color: #008bb8;
+    }
+
+    &:hover {
+      color: #0ba3d3;
+      border-color: #0ba3d3;
+    }
+  }
+
+  &_black {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $black;
+    text-align: center;
+    font-size: 11px;
+    background-color: $black;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+
+
+    &:hover {
+      background-color: $latte;
+      color: $black;
+    }
+  }
+
+
+}
+
+.attention {
+  color: $attention;
+}
+
+.site-link {
+  color: $accent;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s;
+
+  &:hover {
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bold-on-hover {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:after {
+    content: attr(data-text);
+    content: attr(data-text) / "";
+    font-weight: 700;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &:hover {
+    font-weight: 700;
+  }
+}
+
+.section-title {
+  @include adaptiv-value("font-size", 24, 20, 1);
+  margin-bottom: 1.5em;
+
+  &_secondary {
+    font-size: 16px;
+    margin-bottom: 1.2em;
+  }
+}
+
+.rub {
+  display: inline-flex;
+
+  &:after {
+    content: "₽";
+    margin-left: 0.2em;
+  }
+}
+
+.pagination {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  @include adaptiv-value('margin-top', 60, 30, 1);
+
+
+  & .is-active {
+    background: $accent;
+    transform: scale(1);
+  }
+}
+
+.splide__arrow {
+  background: #fff !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+.btn-rounded {
+  padding: 9px;
+  border: 1px solid $accent;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($accent, 0.1);
+  }
+
+  &.current {
+    color: #fff;
+    background-color: $accent;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: inherit;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.gradiented-btn {
+  width: 165px;
+  height: 50px;
+  border: double 3px transparent;
+  border-radius: 30px;
+  font-weight: 500;
+  background-origin: border-box;
+  background-clip: content-box,
+    border-box;
+  cursor: pointer;
+  background-image:
+    linear-gradient(white, #fff),
+    linear-gradient(180deg, #ff6a00, #f1ff20, #2420ff);
+}
+
+.orientation-block {
+
+  &__title {
+    @include adaptiv-value('margin-bottom', 15, 10, 1);
+    font-size: 14px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 15px 15px 60px;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    overflow: hidden;
+    cursor: pointer;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../img/icons/orientation-icon.png");
+    }
+
+    &_right {
+      &:after {
+        transform: scaleX(-1) translateY(-50%);
+      }
+    }
+
+    &:hover,
+    &.current {
+      border-color: $black
+    }
+  }
+}
+
+.zindexed {
+  z-index: -100 !important;
+}
+
+.iframe-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
