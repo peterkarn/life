@@ -505,7 +505,14 @@
     grid-template-columns: clamp(200px, 29vw, 380px) clamp(200px, 29vw, 380px) auto;
     gap: 23px;
 
-    >li:last-child {
+    // >li:last-child {
+    //   @media screen and (min-width: $medium + 1) {
+    //     padding-top: 25px;
+    //   }
+    // }
+
+
+    .test {
       @media screen and (min-width: $medium + 1) {
         padding-top: 25px;
       }

@@ -109,9 +109,8 @@
 }
 
 .information {
-  &__text {
-    padding-bottom: 40px;
 
+  &__text {
     p:not(:last-child) {
       margin-bottom: 1em;
     }

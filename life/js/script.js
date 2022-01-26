@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  //serch form
+  //search form
    
   searchBtn.addEventListener('click', () => {
     searchForm.classList.add('visible');
@@ -308,34 +308,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // modals 
 
-    if (document.querySelector('[data-hystmodal')) {
+  if (document.querySelector('[data-hystmodal')) {
     const myModal = new HystModal({
       linkAttributeName: "data-hystmodal",
-      beforeOpen: function(){
-       pageMarginAdd()
-     },
-     afterClose: function(){
-       pageMarginRemove()
-    },
     });
   }
 
 
   // слайдер в шапке
 
-if (document.querySelector(".header__topline-container")) {
-  new Splide(".header__topline-container", {
-    pagination: false,
-    arrows: false,
-    autoWidth: true,
-    gap: "50px",
-    breakpoints: {
-      720: {
-        gap: 15,
-      },
+new Splide(".header__topline-container", {
+  pagination: false,
+  arrows: false,
+  autoWidth: true,
+  gap: "50px",
+  breakpoints: {
+    720: {
+      gap: 15,
     },
-  }).mount();
-}
+  },
+}).mount();
+
 // main slider
 
 if (document.querySelector(".hero__slider")) {
@@ -457,7 +450,7 @@ if (document.querySelector(".feedback__slider")) {
 }
 
 if (document.querySelector(".sliders-block")) {
-  const secondarySlider = new Splide(".bottom-carousel__slider", {
+  var secondarySlider = new Splide(".bottom-carousel__slider", {
     rewind: true,
     fixedWidth: 164,
     fixedHeight: 102,
@@ -522,7 +515,6 @@ if (document.querySelector(".collections-block__wrapper")) {
     arrows: true,
     pagination: false,
     type: "loop",
-    perMove: 1,
     breakpoints: {
       960: {
         arrows: false,

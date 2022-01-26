@@ -34,5 +34,6 @@ cards.forEach((card) => {
     sidebarCategory.innerHTML = cardCategory;
     sidebarSecondCategory.innerHTML = cardSecondCategory;
     sidebarImage.style.backgroundImage = `url(${cardPreview})`;
+    console.log(cardPreview);
   });
 });

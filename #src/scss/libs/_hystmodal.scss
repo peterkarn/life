@@ -61,7 +61,9 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hystmodal__window {

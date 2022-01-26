@@ -319,6 +319,9 @@ button {
 }
 
 .gradiented-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 165px;
   height: 50px;
   border: double 3px transparent;
