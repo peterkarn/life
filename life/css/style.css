@@ -435,7 +435,6 @@ body {
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: 0.02em;
-  overflow-x: hidden;
 }
 
 body._lock {
@@ -3275,7 +3274,7 @@ body._touch .menu__list > li._active .menu__arrow {
   margin: -3px;
 }
 
-.configurator__colors li {
+.configurator__colors button {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3296,7 +3295,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 2px;
 }
 
-.configurator__colors li::after {
+.configurator__colors button::after {
   content: "✓";
   color: #fff;
   left: 50%;
@@ -3310,11 +3309,13 @@ body._touch .menu__list > li._active .menu__arrow {
   opacity: 0;
 }
 
-.configurator__colors li:hover {
+.configurator__colors button:hover,
+.configurator__colors button.selected {
   border: 1px solid #282828;
 }
 
-.configurator__colors li:hover::after {
+.configurator__colors button:hover::after,
+.configurator__colors button.selected::after {
   opacity: 1;
 }
 

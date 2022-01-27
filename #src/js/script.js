@@ -314,6 +314,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // fabrics buttons
+
+  if (document.querySelector(".configurator__colors")) {
+    const btns = document.querySelectorAll(".configurator__colors button");
+
+    btns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("selected")
+      })
+    })
+  }
+
 
   @@include('./files/sliders.js', {})
   @@include('./files/spoilers.js', {})
