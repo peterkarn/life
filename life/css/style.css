@@ -3590,7 +3590,10 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .toggle-checkbox {
   position: absolute;
-  visibility: hidden;
+  z-index: 1;
+  width: 35px;
+  height: 24px;
+  opacity: 0;
 }
 
 .color-checkboxes {
@@ -3800,6 +3803,7 @@ body._touch .menu__list > li._active .menu__arrow {
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+  padding-left: 2px;
 }
 
 .filters-aside__reset {
@@ -5554,7 +5558,7 @@ iframe {
     top: 30px;
     opacity: 0.5;
     z-index: 10;
-    background-image: url("../../img/icons/close-modal.svg");
+    background-image: url("../img/icons/close-modal.svg");
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
@@ -5699,7 +5703,7 @@ iframe {
             transform: translateY(-50%);
     width: 15px;
     height: 15px;
-    background-image: url("../../img/icons/next.svg");
+    background-image: url("../img/icons/next.svg");
     background-repeat: no-repeat;
     background-size: contain;
     -webkit-transition: -webkit-transform 0.3s;

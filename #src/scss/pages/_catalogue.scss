@@ -173,7 +173,7 @@
       top: 30px;
       opacity: 0.5;
       z-index: 10;
-      background-image: url('../../img/icons/close-modal.svg');
+      background-image: url('../img/icons/close-modal.svg');
       background-size: 60%;
       background-position: center;
       background-repeat: no-repeat;
@@ -235,6 +235,7 @@
     display: grid;
     gap: 10px;
     margin-bottom: 20px;
+    padding-left: 2px;
   }
 
   &__reset {

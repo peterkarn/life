@@ -47,11 +47,8 @@
 
 .toggle-checkbox {
   position: absolute;
-  visibility: hidden;
+  z-index: 1;
+  width: 35px;
+  height: 24px;
+  opacity: 0;
 }
-
-// .toggle-label {
-//   margin-left: 5px;
-//   position: relative;
-//   top: 2px;
-// }

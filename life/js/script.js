@@ -326,6 +326,24 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  // filter 
+
+  if (document.querySelector(".wrapper.catalogue")) {
+      const showFiltersBtn = document.querySelector(".catalogue__showfilter");
+      const filtersBlock = document.querySelector(".catalogue__aside");
+      const filtersCloseBtn = document.querySelector(".catalogue__aside-close"); 
+
+      showFiltersBtn.addEventListener('click', () => {
+        filtersBlock.classList.add("visible");
+        body.classList.add("_lock")
+      })
+
+      filtersCloseBtn.addEventListener('click', () => {
+          filtersBlock.classList.remove("visible")
+          body.classList.remove("_lock")
+      })
+  }
+
 
   // слайдер в шапке
 
